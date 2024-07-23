@@ -4,23 +4,23 @@ all:
       children:
         servers:
           hosts:
-            s1.k3s.local.technoplaza.net:
-              ansible_host: 192.168.1.51
-            s2.k3s.local.technoplaza.net:
-              ansible_host: 192.168.1.52
-            s3.k3s.local.technoplaza.net:
-              ansible_host: 192.168.1.53
+            s1.k3s.local.bullyfive.in:
+              ansible_host: 192.168.5.242
+            s2.k3s.local.bullyfive.in:
+              ansible_host: 192.168.5.243
+            s3.k3s.local.bullyfive.in:
+              ansible_host: 192.168.5.244
         workers:
           hosts:
-            w1.k3s.local.technoplaza.net:
-              ansible_host: 192.168.1.54
-            w2.k3s.local.technoplaza.net:
-              ansible_host: 192.168.1.55
+            w1.k3s.local.bullyfive.in:
+              ansible_host: 192.168.5.245
+            w2.k3s.local.bullyfive.in:
+              ansible_host: 192.168.5.246
       vars:
-        ansible_ssh_user: pve
+        ansible_ssh_user: rohan-sirohi
     proxmox:
       hosts:
-        pve.local.technoplaza.net: {}
+        192.168.5.250:8006: {}
       vars:
         ansible_ssh_user: ansible
   vars:
